@@ -79,7 +79,7 @@ module.exports = {
     // Setup entry points
     config.entry = {
       ...config.entry,
-      content: ["./src/content/content.js"],
+      content: ["./src/content/utils/arrive.js", "./src/content/content.js"],
       background,
     };
 

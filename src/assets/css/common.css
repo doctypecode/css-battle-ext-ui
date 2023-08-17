@@ -1,3 +1,9 @@
-.app-container{
-	text-align: center;
+.app-container {
+  text-align: center;
+}
+
+#contentScriptInsertionPoint {
+  & button {
+    width: 100%;
+  }
 }

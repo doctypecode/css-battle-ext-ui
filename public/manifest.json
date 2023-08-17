@@ -1,13 +1,10 @@
 {
-  "name": "React + Chrome Extension Boilerplate",
-  "description": "React based chrome extension boilerplate with live reload and Chrome Extensions Manifest Version 3!",
+  "name": "CSS Battle EXTENSION",
+  "description": "Chrome Extension to Minify HTML!",
   "version": "0.1.0",
   "manifest_version": 3,
   "icons": {
-    "16": "./logo192.png",
-    "32": "./logo192.png",
-    "48": "./logo192.png",
-    "128": "./logo192.png"
+    "128": "./images/extension_icon.png"
   },
   "background": {
     "service_worker": "background.js"
@@ -15,25 +12,22 @@
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
-      "16": "./logo192.png",
-      "32": "./logo192.png",
-      "48": "./logo192.png",
-      "128": "./logo192.png"
+      "128": "./images/extension_icon.png"
     }
   },
   "options_page": "option.html",
   "content_scripts": [
     {
-      "matches": ["https://github.com/*"],
+      "matches": ["https://cssbattle.dev/*"],
       "js": ["./content.js"]
     }
   ],
   "web_accessible_resources": [
     {
       "resources": ["content.js"],
-      "matches": ["https://github.com/*"]
+      "matches": ["https://cssbattle.dev/*"]
     }
   ],
   "permissions": ["tabs", "scripting", "storage", "management"],
-  "host_permissions": ["https://github.com/*", "http://localhost:3000/*"]
+  "host_permissions": ["https://cssbattle.dev/*", "http://localhost:3000/*"]
 }
